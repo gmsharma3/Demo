@@ -1,2 +1,4 @@
-Demo
-===
+class Test
+{
+
+}
