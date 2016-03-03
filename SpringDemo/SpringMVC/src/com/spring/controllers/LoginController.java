@@ -11,11 +11,11 @@ import com.spring.model.User;
 @Controller
 public class LoginController {
 
-	@RequestMapping(value = "/index" , method = RequestMethod.GET)
+	/*@RequestMapping(value = "/index" , method = RequestMethod.GET)
 	public ModelAndView index(Model model) {
 		model.addAttribute("user", new User());
 		return new ModelAndView("index");
-	}
+	}*/
 	
 	@RequestMapping("/home.htm")
 	public ModelAndView loginCheck(User user){
