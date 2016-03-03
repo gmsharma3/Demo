@@ -67,5 +67,16 @@ public class ListDao {
 						});
 		return books;
 	}
+	
+	/**
+	 * 
+	 * @param book
+	 */
+	public void addNewBook(Book book) {
+		String sql = "insert into PUBLISHER values(?,?)";
+		jdbcTemplate.update(sql, new Object[] {book.getPublisher().getId(), book.getPublisher().getName()});
+		sql = "insert into BOOK values(?,?,?)";
+		jdbcTemplate.update(sql, new Object[] {book.getId(), book.getName(), book.getPrice()});
+	}
 
 }

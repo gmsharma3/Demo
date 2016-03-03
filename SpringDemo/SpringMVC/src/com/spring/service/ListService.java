@@ -23,4 +23,8 @@ public class ListService {
 		return listDao.getListOfBooks(id);
 	}
 	
+	public void addNewBook(Book book) {
+		listDao.addNewBook(book);
+	}
+	
 }

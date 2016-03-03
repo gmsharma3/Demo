@@ -54,4 +54,19 @@ public class ListController {
 		return view;
 	}
 	
+	@RequestMapping("/addBook.htm")
+	public String addBookForm(Model model) {
+		Book book = new Book();
+		model.addAttribute("book", book);
+		return "addBook";
+	}
+	
+	@RequestMapping("/addNewBook.htm")
+	public ModelAndView addNewBook(Book book) {
+		ModelAndView view = new ModelAndView("redirect:listBooks.htm");
+		listService.addNewBook(book);
+		System.out.println("New Book added");
+		return view;
+	}
+	
 }
