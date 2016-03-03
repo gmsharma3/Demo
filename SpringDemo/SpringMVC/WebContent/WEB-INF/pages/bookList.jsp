@@ -36,5 +36,6 @@ td {
 			</tr>
 		</c:forEach>
 	</table>
+	<a href="addBook.htm">Add New Book</a>
 </body>
 </html>
